@@ -7,7 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!");
 	//Parse CLI ARGS
 	if len(os.Args) != 3 {
 		//Usage
