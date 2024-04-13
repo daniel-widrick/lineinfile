@@ -8,7 +8,7 @@ Lineinfile is a simple command line utility to ensure
 that a file contains a given line of text.
 
 Examples:
-     lineinfile ~/.bashrc alias cdg="cd ~/git-repos"
+     lineinfile ~/.bashrc 'alias cdg="cd ~/git-repos"'
 ```
 
 ## Install
