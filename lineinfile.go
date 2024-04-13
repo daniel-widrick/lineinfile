@@ -11,7 +11,7 @@ func main() {
 	if len(os.Args) != 3 {
 		//Usage
 		fmt.Printf("Usage: %s <filename> '<line>'\n\n",os.Args[0])
-		fmt.Printf("Lineinfile is a simple command line base utility to ensure that a file contains a given line of text.\n\n")
+		fmt.Printf("Lineinfile is a simple command line utility to ensure\nthat a file contains a given line of text.\n\n")
 		fmt.Printf("Examples:\n     lineinfile ~/.bashrc 'alias cdg=\"cd ~/git-repos\"'\n")
 		os.Exit(-1)
 	}
