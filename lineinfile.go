@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("Line: %s\n",line)
 
 	//Open File
-	file, err := os.Open(filename)
+	file, err := os.OpenFile(filename, os.O_RDWR, 0677)
 	if err != nil {
 		fmt.Printf("File does not exist: %s\n",filename)
 		os.Exit(2)
@@ -38,13 +38,6 @@ func main() {
 		}
 	}
 	//Line does not exist
-	file.Close()
-	file, err = os.OpenFile(filename,os.O_APPEND|os.O_WRONLY, 0644)
-	if err != nil {
-		fmt.Printf("Error opening file for appending: %s\n",err)
-		os.Exit(3)
-	}
-	defer file.Close()
 	_, err = file.WriteString(line + "\n")
 	if err != nil {
 		fmt.Printf("Error writing to file: %s\n",err)
